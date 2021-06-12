@@ -1,19 +1,19 @@
-'use strict';
+"use strict";
 
 // Data
 const factoryAccount1 = {
-  factoryName: 'Factory 1',
+  factoryName: "Factory 1",
   movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
   password: 1111,
   movementsDates: [
-    '2019-11-18T21:31:17.178Z',
-    '2019-12-23T07:42:02.383Z',
-    '2020-01-28T09:15:04.904Z',
-    '2020-04-01T10:17:24.185Z',
-    '2020-05-08T14:11:59.604Z',
-    '2021-06-10T17:01:17.194Z',
-    '2021-06-05T23:36:17.929Z',
-    '2021-06-08T10:51:36.790Z',
+    "2019-11-18T21:31:17.178Z",
+    "2019-12-23T07:42:02.383Z",
+    "2020-01-28T09:15:04.904Z",
+    "2020-04-01T10:17:24.185Z",
+    "2020-05-08T14:11:59.604Z",
+    "2021-06-10T17:01:17.194Z",
+    "2021-06-05T23:36:17.929Z",
+    "2021-06-08T10:51:36.790Z",
   ],
 };
 
@@ -23,60 +23,60 @@ const factoryAccount2 = {
   interestRate: 1.5,
   password: 2222,
   movementsDates: [
-    '2019-11-01T13:15:33.035Z',
-    '2019-11-30T09:48:16.867Z',
-    '2019-12-25T06:04:23.907Z',
-    '2020-01-25T14:18:46.235Z',
-    '2020-02-05T16:33:06.386Z',
-    '2020-04-10T14:43:26.374Z',
-    '2020-06-25T18:49:59.371Z',
-    '2020-07-26T12:01:20.894Z',
+    "2019-11-01T13:15:33.035Z",
+    "2019-11-30T09:48:16.867Z",
+    "2019-12-25T06:04:23.907Z",
+    "2020-01-25T14:18:46.235Z",
+    "2020-02-05T16:33:06.386Z",
+    "2020-04-10T14:43:26.374Z",
+    "2020-06-25T18:49:59.371Z",
+    "2020-07-26T12:01:20.894Z",
   ],
 };
 
 const factoryAccount3 = {
-  factoryName: 'Factory 3',
+  factoryName: "Factory 3",
   movements: [200, -200, 340, -300, -20, 50, 400, -460],
   password: 3333,
   movementsDates: [
-    '2019-11-18T21:31:17.178Z',
-    '2019-12-23T07:42:02.383Z',
-    '2020-01-28T09:15:04.904Z',
-    '2020-04-01T10:17:24.185Z',
-    '2020-05-08T14:11:59.604Z',
-    '2020-07-26T17:01:17.194Z',
-    '2020-07-28T23:36:17.929Z',
-    '2020-08-01T10:51:36.790Z',
+    "2019-11-18T21:31:17.178Z",
+    "2019-12-23T07:42:02.383Z",
+    "2020-01-28T09:15:04.904Z",
+    "2020-04-01T10:17:24.185Z",
+    "2020-05-08T14:11:59.604Z",
+    "2020-07-26T17:01:17.194Z",
+    "2020-07-28T23:36:17.929Z",
+    "2020-08-01T10:51:36.790Z",
   ],
 };
 
 const factoryAccount4 = {
-  factoryName: 'Factory 4',
+  factoryName: "Factory 4",
   movements: [430, 1000, 700, 50, 90],
   password: 4444,
   movementsDates: [
-    '2019-11-01T13:15:33.035Z',
-    '2019-11-30T09:48:16.867Z',
-    '2019-12-25T06:04:23.907Z',
-    '2020-01-25T14:18:46.235Z',
-    '2020-02-05T16:33:06.386Z',
-    '2020-04-10T14:43:26.374Z',
-    '2020-06-25T18:49:59.371Z',
-    '2020-07-26T12:01:20.894Z',
+    "2019-11-01T13:15:33.035Z",
+    "2019-11-30T09:48:16.867Z",
+    "2019-12-25T06:04:23.907Z",
+    "2020-01-25T14:18:46.235Z",
+    "2020-02-05T16:33:06.386Z",
+    "2020-04-10T14:43:26.374Z",
+    "2020-06-25T18:49:59.371Z",
+    "2020-07-26T12:01:20.894Z",
   ],
 };
 
 const factoryAccount5 = {
-  factoryName: 'Factory 5',
+  factoryName: "Factory 5",
   movements: [430, 1000, 700, 50, 90, -10],
   password: 5555,
   movementsDates: [
-    '2019-11-18T21:31:17.178Z',
-    '2019-12-23T07:42:02.383Z',
-    '2020-01-28T09:15:04.904Z',
-    '2020-04-01T10:17:24.185Z',
-    '2020-05-08T14:11:59.604Z',
-    '2020-11-18T21:31:17.178Z',
+    "2019-11-18T21:31:17.178Z",
+    "2019-12-23T07:42:02.383Z",
+    "2020-01-28T09:15:04.904Z",
+    "2020-04-01T10:17:24.185Z",
+    "2020-05-08T14:11:59.604Z",
+    "2020-11-18T21:31:17.178Z",
   ],
 };
 
@@ -89,45 +89,45 @@ const accounts = [
 ];
 
 // Elements
-const navEl = document.querySelector('.nav');
-const bodyEl = document.querySelector('body');
-const startEl = document.querySelector('.start');
-const labelWelcome = document.querySelector('.welcome');
-const labelDate = document.querySelector('.date');
-const labelTotalWorkers = document.querySelector('.totalWorkers__value');
-const labelSumNeeded = document.querySelector('.summary__value--needed');
+const navEl = document.querySelector(".nav");
+const bodyEl = document.querySelector("body");
+const startEl = document.querySelector(".start");
+const labelWelcome = document.querySelector(".welcome");
+const labelDate = document.querySelector(".date");
+const labelTotalWorkers = document.querySelector(".totalWorkers__value");
+const labelSumNeeded = document.querySelector(".summary__value--needed");
 const labelSumTransfered = document.querySelector(
-  '.summary__value--transfered'
+  ".summary__value--transfered"
 );
-const labelTimer = document.querySelector('.timer');
+const labelTimer = document.querySelector(".timer");
 
-const containerApp = document.querySelector('.app');
-const containerMovements = document.querySelector('.movements');
+const containerApp = document.querySelector(".app");
+const containerMovements = document.querySelector(".movements");
 
-const btnLoginStart = document.querySelector('.login--btn');
-const btnLoginNav = document.querySelector('.login__btn__nav');
-const btnTransfer = document.querySelector('.form__btn--transfer');
-const btnGetMore = document.querySelector('.form__btn--getMore');
-const btnClose = document.querySelector('.form__btn--close');
-const btnSort = document.querySelector('.btn--sort');
+const btnLoginStart = document.querySelector(".login--btn");
+const btnLoginNav = document.querySelector(".login__btn__nav");
+const btnTransfer = document.querySelector(".form__btn--transfer");
+const btnGetMore = document.querySelector(".form__btn--getMore");
+const btnClose = document.querySelector(".form__btn--close");
+const btnSort = document.querySelector(".btn--sort");
 
-const inputUsername = document.querySelector('.input--user');
-const inputPassword = document.querySelector('.input--password');
-const inputLoginUsername = document.querySelector('.login__input--user');
-const inputLoginPassword = document.querySelector('.login__input--password');
+const inputUsername = document.querySelector(".input--user");
+const inputPassword = document.querySelector(".input--password");
+const inputLoginUsername = document.querySelector(".login__input--user");
+const inputLoginPassword = document.querySelector(".login__input--password");
 
-const inputTransferTo = document.querySelector('.form__input--to');
-const inputTransferWorkers = document.querySelector('.form__input--workers');
+const inputTransferTo = document.querySelector(".form__input--to");
+const inputTransferWorkers = document.querySelector(".form__input--workers");
 
 const inputGetMoreWorkers = document.querySelector(
-  '.form__input--getMore-workers'
+  ".form__input--getMore-workers"
 );
-const inputCloseUsername = document.querySelector('.form__input--user');
-const inputClosePassword = document.querySelector('.form__input--pin');
+const inputCloseUsername = document.querySelector(".form__input--user");
+const inputClosePassword = document.querySelector(".form__input--pin");
 
 let currentAccount, timer;
 
-containerApp.style.display = 'none';
+containerApp.style.display = "none";
 
 const appLogin = function () {
   currentAccount = accounts.find(
@@ -139,23 +139,22 @@ const appLogin = function () {
     currentAccount?.password === Number(inputLoginPassword.value) ||
     currentAccount?.password === Number(inputPassword.value)
   ) {
-    console.log(currentAccount);
     //Display UI and Message
     //factory name
     labelWelcome.textContent = `${currentAccount.factoryName}`;
     //showing app data
     containerApp.style.opacity = 100;
 
-    if (containerApp.style.display === 'none') {
+    if (containerApp.style.display === "none") {
       //display container app
-      containerApp.style.display = 'grid';
+      containerApp.style.display = "grid";
 
       //show nav bar
-      navEl.classList.remove('hidden');
+      navEl.classList.remove("hidden");
 
       //hide background and start screen
-      bodyEl.style.backgroundImage = 'url(../images/back.jpg)';
-      startEl.style.display = 'none';
+      bodyEl.style.backgroundImage = "url(images/back.jpg)";
+      startEl.style.display = "none";
     }
 
     //timer
@@ -177,8 +176,8 @@ const appLogin = function () {
     labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
 
     //Clear the input fields of Login
-    inputLoginUsername.value = inputLoginPassword.value = '';
-    inputUsername.value = inputPassword.value = '';
+    inputLoginUsername.value = inputLoginPassword.value = "";
+    inputUsername.value = inputPassword.value = "";
     inputLoginPassword.blur();
   }
 };
@@ -221,16 +220,16 @@ const updateUI = function (acc) {
 };
 
 const hideAppUI = function () {
-  containerApp.style.display = 'none';
-  navEl.classList.add('hidden');
+  containerApp.style.display = "none";
+  navEl.classList.add("hidden");
 
   //display login Screen
-  startEl.style.display = 'flex';
-  bodyEl.style.backgroundImage = 'url(../images/background-image.jpg)';
+  startEl.style.display = "flex";
+  bodyEl.style.backgroundImage = "url(images/background-image.jpg)";
 };
 
 //Login button click from Nav Bar
-btnLoginNav.addEventListener('click', function (e) {
+btnLoginNav.addEventListener("click", function (e) {
   //prevent form submitting
   e.preventDefault();
 
@@ -238,7 +237,7 @@ btnLoginNav.addEventListener('click', function (e) {
 });
 
 //Login Button click from Starter Page
-btnLoginStart.addEventListener('click', function (e) {
+btnLoginStart.addEventListener("click", function (e) {
   //prevent form submitting
   e.preventDefault();
 
@@ -250,9 +249,9 @@ const createUserName = function (accs) {
   accs.forEach(function (acc) {
     acc.username = acc.factoryName
       .toLowerCase()
-      .split(' ')
+      .split(" ")
       .map((name) => name[0])
-      .join('');
+      .join("");
   });
 };
 
@@ -279,8 +278,8 @@ const formatMovementsDate = function (date) {
 
   const daysPassed = calDayPassed(new Date(), date);
 
-  if (daysPassed === 0) return 'Today';
-  if (daysPassed === 1) return 'Yesterday';
+  if (daysPassed === 0) return "Today";
+  if (daysPassed === 1) return "Yesterday";
   if (daysPassed <= 7) return `${daysPassed} days ago`;
 
   const day = `${date.getDate()}`.padStart(2, 0);
@@ -293,14 +292,13 @@ const formatMovementsDate = function (date) {
 //display movements
 const displayMovements = function (acc, sort = false) {
   //for empty container
-  containerMovements.innerHTML = '';
+  containerMovements.innerHTML = "";
 
   //sorting
   const movs = sort ? acc.slice().sort((a, b) => a - b) : acc.movements;
-  console.log(movs);
 
   movs.forEach(function (mov, i) {
-    const type = mov > 0 ? 'received' : 'transfered';
+    const type = mov > 0 ? "received" : "transfered";
 
     const date = new Date(acc.movementsDates[i]);
     const displayDate = formatMovementsDate(date);
@@ -311,7 +309,7 @@ const displayMovements = function (acc, sort = false) {
                       <div class="movements__value">${Math.abs(mov)} </div>
                     </div>`;
 
-    containerMovements.insertAdjacentHTML('afterbegin', html);
+    containerMovements.insertAdjacentHTML("afterbegin", html);
   });
 };
 
@@ -323,7 +321,7 @@ const calDisplayFactoryWorkers = function (acc) {
 };
 
 //Workers Transfer Functionality
-btnTransfer.addEventListener('click', function (e) {
+btnTransfer.addEventListener("click", function (e) {
   e.preventDefault();
 
   const workers = Number(inputTransferWorkers.value);
@@ -331,7 +329,7 @@ btnTransfer.addEventListener('click', function (e) {
     (acc) => acc.username === inputTransferTo.value
   );
 
-  inputTransferTo.value = inputTransferWorkers.value = '';
+  inputTransferTo.value = inputTransferWorkers.value = "";
 
   if (
     workers > 0 &&
@@ -357,7 +355,7 @@ btnTransfer.addEventListener('click', function (e) {
 });
 
 //Get More Workers Functionality
-btnGetMore.addEventListener('click', function (e) {
+btnGetMore.addEventListener("click", function (e) {
   e.preventDefault();
 
   const workers = Number(inputGetMoreWorkers.value);
@@ -381,11 +379,11 @@ btnGetMore.addEventListener('click', function (e) {
     }, 3000);
   }
 
-  inputGetMoreWorkers.value = '';
+  inputGetMoreWorkers.value = "";
 });
 
 //Close Account Functionality
-btnClose.addEventListener('click', function (e) {
+btnClose.addEventListener("click", function (e) {
   e.preventDefault();
 
   let confrimUsername = inputCloseUsername.value;
@@ -404,14 +402,14 @@ btnClose.addEventListener('click', function (e) {
     hideAppUI();
   }
 
-  confrimUsername = confrimPassword = '';
+  confrimUsername = confrimPassword = "";
 });
 
 //to preserve the state of sorting
 let sorted = false;
 
 //Sorting Functionality
-btnSort.addEventListener('click', function (e) {
+btnSort.addEventListener("click", function (e) {
   e.preventDefault();
   displayMovements(currentAccount.movements, !sorted);
   sorted = !sorted;
