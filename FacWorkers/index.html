@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="/images/iccon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <title>FacWorkers</title>
+  </head>
+  <body>
+    <!-- TOP NAVIGATION -->
+    <nav class="nav hidden">
+      <img src="images/logo.png" alt="Logo" class="Logo" />
+      <p class="logo__name">FacWorkers</p>
+      <p class="welcome"></p>
+
+      <form class="login">
+        <input
+          type="text"
+          placeholder="Username"
+          class="login__input login__input--user"
+        />
+
+        <input
+          type="password"
+          placeholder="Password"
+          maxlength="6"
+          class="login__input login__input--password"
+        />
+        <button class="login__btn__nav">&rarr;</button>
+      </form>
+    </nav>
+
+    <!-- Start Screen for login purpose -->
+    <div class="start">
+      <section class="intro section--logo">
+        <img class="logo" src="images/logo.png" alt="iContribution logo"">
+        <h1 class="logo--name">FacWorkers</h1>
+      </section>
+      <section class="intro section--login">
+        <p class="login--welcome">Log in to get started</p>
+        <hr class="line" />
+        <form class="login--main">
+          <input
+            type="text"
+            placeholder="Username"
+            class="login--input input--user"
+          />
+
+          <input
+            type="password"
+            placeholder="Password"
+            maxlength="6"
+            class="login--input input--password"
+          />
+          <button class="login--btn">&rarr;</button>
+        </form>
+      </section>
+    </div>
+
+    <main class="app">
+      <!-- BALANCE -->
+      <div class="balance">
+        <div>
+          <p class="totalWorkers__value">0000</p>
+          <label class="available__label">
+            (Workers Available in Factory)
+          </label>
+          <p class="updated__date">
+            As of <span class="date">05/03/2037</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- MOVEMENTS -->
+      <div class="movements">
+        <div class="movements__row">
+          <div class="movements__type movements__type--received">Receive</div>
+          <div class="movements__date">3 days ago</div>
+          <div class="movements__value">4 000€</div>
+        </div>
+        <div class="movements__row">
+          <div class="movements__type movements__type--transfered">
+            Transfer
+          </div>
+          <div class="movements__date">24/01/2037</div>
+          <div class="movements__value">-378€</div>
+        </div>
+      </div>
+
+      <!-- SUMMARY -->
+      <div class="summary">
+        <p class="summary__label">Workers (Received)</p>
+        <p class="summary__value summary__value--needed">0000€</p>
+        <p class="summary__label">Workers (Transfered)</p>
+        <p class="summary__value summary__value--transfered">0000€</p>
+        <button class="btn--sort">&downarrow; SORT</button>
+      </div>
+
+      <!-- OPERATION: TRANSFERS WORKERS-->
+      <div class="operation operation--transfer">
+        <h2>Transfer Workers</h2>
+        <form class="form form--transfer">
+          <input type="text" class="form__input form__input--to" />
+          <input type="number" class="form__input form__input--workers" />
+          <button class="form__btn form__btn--transfer">&rarr;</button>
+          <label class="form__label">Factory ID</label>
+          <label class="form__label">No. of Workers</label>
+        </form>
+      </div>
+
+      <!-- OPERATION: GET MORE WORKERS-->
+      <div class="operation operation--getMore">
+        <h2>Get More Workers</h2>
+        <form class="form form--getMore">
+          <input
+            type="number"
+            class="form__input form__input--getMore-workers"
+          />
+          <button class="form__btn form__btn--getMore">&rarr;</button>
+          <label class="form__label form__label--getMore">No. of Workers</label>
+        </form>
+      </div>
+
+      <!-- OPERATION: CLOSE -->
+      <div class="operation operation--close">
+        <h2>Close Account</h2>
+        <form class="form form--close">
+          <input type="text" class="form__input form__input--user" />
+          <input
+            type="password"
+            maxlength="6"
+            class="form__input form__input--pin"
+          />
+          <button class="form__btn form__btn--close">&rarr;</button>
+          <label class="form__label">Confirm Username</label>
+          <label class="form__label">Confirm Password</label>
+        </form>
+      </div>
+
+      <!-- LOGOUT TIMER -->
+      <p class="logout-timer">
+        You will be logged out in <span class="timer">05:00</span>
+      </p>
+    </main>
+
+    <!-- <footer>
+      &copy; by Jonas Schmedtmann. Don't claim as your own :)
+    </footer> -->
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

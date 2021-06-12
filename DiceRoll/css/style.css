@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
 * {
   margin: 0;
@@ -12,11 +12,11 @@ html {
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 400;
   height: 100vh;
   color: #333;
-  background-image: url('../images/dice-background.jpg');
+  background-image: url("../images/dice-background.jpg");
   display: flex;
   background-repeat: no-repeat;
   background-size: cover;
@@ -131,13 +131,13 @@ main {
   margin-right: 0.6vh;
 }
 
-.instructions{
-    width: 8vh;
-    height: 8vh;
+.instructions {
+  width: 8vh;
+  height: 8vh;
 }
 
-.instructions--modal{
-    top: 2vh;
+.instructions--modal {
+  top: 2vh;
 }
 
 .btn--new {
@@ -147,7 +147,7 @@ main {
   top: 56vh;
 }
 .btn--hold {
-    top: 65vh;
+  top: 65vh;
 }
 
 .btn:active {
@@ -169,7 +169,7 @@ main {
 }
 
 .player--winner {
-  background-color: #3A8625;
+  background-color: #3a8625;
 }
 
 .player--winner .name {
@@ -193,7 +193,7 @@ h1 {
   font-size: 4vh;
 }
 
-h2{
+h2 {
   font-size: 2.5vh;
   margin-bottom: 2vh;
   margin-top: 2vh;
@@ -216,7 +216,7 @@ p {
   transform: translate(-50%, -50%);
   width: 55%;
   height: 65%;
-  background-color: #E3EEEE;
+  background-color: #e4e2e2;
   padding: 8vh;
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
@@ -234,6 +234,6 @@ p {
   z-index: 5;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
